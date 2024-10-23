@@ -115,7 +115,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -212,7 +212,7 @@ catkin_package(
 
 ## Specify additional locations of header files
 include_directories(
-  include
+  #include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -225,3 +225,5 @@ add_library(${PROJECT_NAME}_lib
 add_executable(robot_info_node src/robot_info_main.cpp src/robot_info_class.cpp)
 target_link_libraries(robot_info_node ${catkin_LIBRARIES} robot_info_lib )
 
+add_executable(agv_robot_info_node src/agv_robot_info_main.cpp src/agv_robot_info_class.cpp)
+target_link_libraries(agv_robot_info_node ${catkin_LIBRARIES} robot_info_lib )
